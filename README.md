@@ -11,6 +11,11 @@ To investigate whether improving predictive accuracy leads to better decision-ma
 
 ---
 
+## Pipeline
+Data → Preprocessing → Feature Engineering → Model → Prediction → Decision System → Evaluation
+
+---
+
 ## Dataset
 - Kaggle: Store Sales – Time Series Forecasting
 - Filtered to a single store and product family (GROCERY I)
@@ -71,3 +76,12 @@ This highlights the importance of evaluating machine learning systems at the dec
 - Python
 - Pandas
 - Scikit-learn
+
+---
+
+## Future Work
+- Incorporate cost-sensitive decision making (inventory holding cost vs stockout cost)
+- Test advanced models (e.g., Gradient Boosting, LSTM)
+- Extend system to multiple stores and product categories
+- Integrate external features (holidays, promotions, weather)
+  
