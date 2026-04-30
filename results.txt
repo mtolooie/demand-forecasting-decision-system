@@ -1,0 +1,9 @@
+Model: Random Forest
+
+MAE: 423.48
+Decision Accuracy: 0.70
+
+Notes:
+- Added lag_30 feature
+- Slight improvement in MAE
+- Slight decrease in decision accuracy
