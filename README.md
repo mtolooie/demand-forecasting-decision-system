@@ -1,29 +1,71 @@
-# demand-forecasting-decision-system
-A data-driven decision support system for demand forecasting in small businesses
 # Demand Forecasting Decision Support System
 
 ## Overview
-A machine learning system that predicts demand and converts predictions into business decisions.
+This project implements a data-driven decision support system for demand forecasting in small business environments.  
+It combines time series forecasting with a rule-based decision layer to evaluate not only prediction accuracy but also decision quality.
 
-## Goal
-To evaluate whether predictive models can support decision-making in small business environments.
+---
 
-## Methods
-- Time series preprocessing
-- Feature engineering (time + lag features)
-- Random Forest regression
-- Decision rule system (threshold-based)
+## Research Objective
+To investigate whether improving predictive accuracy leads to better decision-making in a business context.
 
-## Evaluation
+---
+
+## Dataset
+- Kaggle: Store Sales – Time Series Forecasting
+- Filtered to a single store and product family (GROCERY I)
+
+---
+
+## Methodology
+
+### 1. Data Preprocessing
+- Date parsing and sorting
+- Missing value handling
+- Filtering to single time series
+
+### 2. Feature Engineering
+- Time-based features: day, month, day of week
+- Lag features: lag_7, lag_14, lag_30
+
+### 3. Model
+- Random Forest Regressor
+- Hyperparameters:
+  - n_estimators = 200
+  - max_depth = 10
+
+### 4. Decision Support System
+A rule-based system converts predictions into business actions:
+
+- Low demand → Reduce stock  
+- Medium demand → Maintain stock  
+- High demand → Increase stock  
+
+Thresholds are based on data percentiles.
+
+---
+
+## Evaluation Metrics
+
+### Prediction Level
 - Mean Absolute Error (MAE)
-- Decision Accuracy (business-level metric)
+
+### Decision Level
+- Decision Accuracy (agreement between predicted and true decisions)
+
+---
 
 ## Results
-- MAE: 423.48
-- Decision Accuracy: 70%
+- MAE: ~423.48  
+- Decision Accuracy: ~0.70  
 
-## Key Finding
-Improved prediction accuracy does not always improve decision quality.
+---
+
+## Key Insight
+Improving predictive accuracy does not necessarily improve decision quality.  
+This highlights the importance of evaluating machine learning systems at the decision level, not only the prediction level.
+
+---
 
 ## Tools
 - Python
